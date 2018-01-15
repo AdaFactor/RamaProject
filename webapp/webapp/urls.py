@@ -16,8 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-urlpatterns = [    
+urlpatterns = [   
+    path('', include('managementApp.urls')),
     path('grappelli/', include('grappelli.urls')),
-    path('manage/', include('managementApp.urls')),
     path('admin/', admin.site.urls),
 ]
