@@ -3,6 +3,9 @@ from django.contrib.postgres.fields import ArrayField
 
 
 class Address(models.Model):
+    """
+        Address og member in the site.
+    """
     house_no = models.CharField(max_length=8)
     village_no = models.CharField(max_length=3)
     alley = models.CharField(max_length=32)
@@ -16,6 +19,9 @@ class Address(models.Model):
         return self.province
 
 class Member(models.Model):
+    """
+        Members of the site are stored in this data model
+    """
     prefix_choice = (
         ('Mr', 'นาย'),
         ('Mrs', 'นาง'),
