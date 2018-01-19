@@ -15,9 +15,11 @@ class Address(models.Model):
     province = models.CharField(max_length=32)
     post_code = models.CharField(max_length=5)
 
-    def __str__(self):
-        return self.province
 
+    def __str__(self):
+        return ('%s หมู่ %s ถ.%s ซ.%s อ.%s ต.%s จ.%s %s') % (self.house_no, self.village_no, self.road, self.alley, self.area, self.sub_area, self.province, self.post_code)
+
+1
 class Member(models.Model):
     """
         Members of the site are stored in this data model
@@ -45,6 +47,15 @@ class Member(models.Model):
     )
     email = models.CharField(max_length=128)
     registered_datetime = models.DateTimeField(auto_now=True)
+    change_list_template = "admin/change_list_filter_sidebar.html"
+
+    @staticmethod
+    def autocomplete_search_fields():
+        return ('id_iexact', 'area_icontains', 'sub_area_icontains')
+
 
     def __str__(self):
         return ('%d %s %s') % (self.id, self.first_name, self.last_name)
+
+    def related_label(self):
+        return u"อ.%s ต.%s" % (self.address.area, self.address.sub_area)
