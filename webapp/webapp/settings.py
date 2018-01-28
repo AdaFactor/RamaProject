@@ -81,7 +81,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ramadb',
         'USER': 'adafactor',
-        'PASSWORD': 'Arkane1902',
+        'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '',
     }
