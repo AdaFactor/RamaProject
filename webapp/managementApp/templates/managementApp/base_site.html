@@ -28,7 +28,15 @@
         <div class="cover black" data-color="black"></div>
         
         {% block content %}{% endblock content %}
-        {% block footer %}{% endblock footer %}
+        {% block footer %}
+            <div class="footer">
+                <div class="container">
+                    สร้างจาก
+                    <i class="fa fa-heart heart"></i> โดย
+                    <a href="#">ชมรมคนรักในหลวง</a>
+                </div>
+            </div>
+        {% endblock footer %}
         {% block scripts %}{% endblock scripts %}
     </div>
 </body>

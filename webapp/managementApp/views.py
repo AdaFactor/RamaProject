@@ -12,3 +12,6 @@ def landing(request):
 
 def demo(request):
     return render(request, 'managementApp/demo_tree.html')
+
+def new_member(request):
+    return render(request, 'managementApp/new_member.html')
