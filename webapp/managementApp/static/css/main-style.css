@@ -786,6 +786,10 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     color: #FF3B30;
 }
 
+.upper-btn {
+    margin-left: 1em;
+}
+
 @media (min-width:219px){        
     .main .subscribe .form-group{
         width: auto;
