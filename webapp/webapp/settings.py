@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'grappelli',
+    'crispy_forms',
     'managementApp',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -125,4 +126,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+
 GRAPPELLI_ADMIN_TITLE = 'RamaProject'
+CRISPY_TEMPLATE_PACK = "bootstrap3"

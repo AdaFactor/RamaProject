@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.postgres.fields import ArrayField
+from datetime import date
 
 
 class Address(models.Model):
@@ -62,6 +63,10 @@ class Member(models.Model):
     expiry_date = models.DateField(blank=True, null=True)
     registered_datetime = models.DateTimeField(auto_now=True)
     change_list_template = "admin/change_list_filter_sidebar.html"
+
+    def cal_expiry_date(self):
+        paid_date = self.paid_date
+        return date(paid_date.year + 1, paid_date.month, paid_date.day)
 
     @staticmethod
     def autocomplete_search_fields():

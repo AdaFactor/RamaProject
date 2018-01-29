@@ -790,6 +790,14 @@ h1 small, h2 small, h3 small, h1 .small, h2 .small, h3 .small {
     margin-left: 1em;
 }
 
+.registration-form {
+    padding-top: 1em;
+}
+
+.registration-form label, legend{
+    color: #fff
+}
+
 @media (min-width:219px){        
     .main .subscribe .form-group{
         width: auto;
