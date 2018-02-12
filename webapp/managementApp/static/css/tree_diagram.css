@@ -11,5 +11,9 @@
 .link {
     fill: none;
     stroke: rgb(187, 187, 187);
-    stroke-width: 2px;
+    stroke-width: 5px;
+}
+
+.tree-container {
+    margin-top: 10em;
 }

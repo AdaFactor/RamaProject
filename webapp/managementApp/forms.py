@@ -23,7 +23,7 @@ class MemberForm(ModelForm):
         'phone_no',
         'email',
         'reference_person',
-        'relationship',
+        # 'relationship',
         'paid',
         'paid_date',
         ]
@@ -55,7 +55,7 @@ class MemberForm(ModelForm):
                         'phone_no',
                         'email',
                         'reference_person',
-                        'relationship',
+                        # 'relationship',
                         'paid',
                         'paid_date',
                     ),

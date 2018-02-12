@@ -8,7 +8,7 @@
 {% endblock style %}
 
 {% block content %}
-    <div class="container">
+    <div class="container tree-container">
         <div class="content">
             <div class="tree-content"></div>            
         </div>
@@ -43,7 +43,8 @@
                                     "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",
                                 },
                             ]                            
-                        }, {
+                        }, 
+                        {
                             "name": "User5",
                             "parent": "Vice Chairman",
                             "icon": "https://png.icons8.com/color/100/000000/user-male-skin-type-6.png",                            
@@ -81,7 +82,7 @@
         
         // ************** Generate the tree diagram	 *****************
         var margin = {top: 64, right: 120, bottom: 20, left: 200},
-            width = 1000,
+            width = 1300,
             height = 726;
             
         var i = 0;
@@ -99,9 +100,7 @@
             .attr("height", height + margin.top + margin.bottom)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
-        
-        
-            
+           
         root = data[0];
             
         update(root);
