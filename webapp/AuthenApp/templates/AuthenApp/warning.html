@@ -1,0 +1,27 @@
+{% extends "StaticPageApp/base_site.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/warning-style.css">
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="content warning-container">
+            <div class="wrap">
+                <h4 class="logo head-text">ชมรมคนรักในหลวง</h4>
+                <div class="row">
+                    <div class="col-md-4 text-right">
+                        <img src="/static/images/warning.png" class="email-img" alt="Responsive image" />
+                    </div>
+                    <div class="col-md-8">
+                        <p class="email-confirm">Verify Your Account</p>
+                        <h5 class="email-confirm">Before we get started, please confirm your email address.</h5>
+                        <div class="btn-confirm">
+                            <a class="btn btn-warning btn-fill">Confirm Email</a>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

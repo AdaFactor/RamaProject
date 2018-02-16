@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+}
+
+.login-container {
+    margin-top: 7em;
+}
+
+.login-page {
+    width: 50%;
+    margin: 0px auto;
+    padding: 20px 30px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+input.username, input.password, input.email {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+.forget {
+    margin-top: 30px;
+}
+
+.forget-password {
+    color: #fff;
+}
+
+.forget-password:hover {
+    color: #fff;
+}
+
+div.btn-login, div.forget, div.btn-forget {
+    text-align: center;
+}
