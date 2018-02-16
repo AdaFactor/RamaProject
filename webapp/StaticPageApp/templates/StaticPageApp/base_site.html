@@ -70,10 +70,10 @@
                         </a>
                     </li>
                     <li>
-                        <a class="btn btn-success btn-fill" href={% url 'admin_menu' %} role="button">เข้าสู่ระบบ</a>
+                        <a class="btn btn-success btn-fill" href={% url 'AuthenApp:login' %} role="button">เข้าสู่ระบบ</a>
                     </li>
                     <li>
-                        <a class="btn btn-primary btn-fill upper-btn" href={% url 'demo' %} role="button">Demo</a>
+                        <a class="btn btn-primary btn-fill upper-btn" href={% url 'StaticPageApp:demo'%} role="button">Demo</a>
                     </li>
                 </ul>
     
@@ -92,6 +92,7 @@
         <div class="cover black" data-color="black"></div>
         
         {% block content %}{% endblock content %}
+        
         {% block footer %}
             <div class="footer">
                 <div class="container">
@@ -101,6 +102,10 @@
                 </div>
             </div>
         {% endblock footer %}
+
+        <script src="/static/js/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <script src="/static/js/bootstrap.min.js" type="text/javascript"></script>
+        
         {% block scripts %}{% endblock scripts %}
     </div>
 </body>
