@@ -1,5 +1,5 @@
 from django.forms import ModelForm, DateInput
-from .models import Member, Address
+from MemberApp.models import Member, Address
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Submit, Layout, Fieldset, Field, Div
 from crispy_forms.bootstrap import PrependedText, PrependedAppendedText, FormActions, StrictButton, InlineField
@@ -9,7 +9,7 @@ class DateInput(DateInput):
     input_type = 'date'
 
 
-class MemberForm(ModelForm):
+class RegistrationForm(ModelForm):
     class Meta:
         model = Member
         fields = [
@@ -33,7 +33,7 @@ class MemberForm(ModelForm):
         }
 
     def __init__(self, request, *args, **kwargs):
-        super(MemberForm, self).__init__(*args, **kwargs)
+        super(RegistrationForm, self).__init__(*args, **kwargs)
         self.helper = FormHelper()
         self.helper.form_method = 'POST'
         self.helper.form_action = ''
