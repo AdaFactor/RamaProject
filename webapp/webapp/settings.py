@@ -33,7 +33,6 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'grappelli',
     'crispy_forms',
-    # 'managementApp',
     'AuthenApp',
     'MemberApp',
     'StaticPageApp',
