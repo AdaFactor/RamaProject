@@ -4,5 +4,4 @@ from . import views
 app_name = 'StaticPageApp'
 urlpatterns = [
     path('', views.landing, name='landing'),
-    path('demo/', views.demo, name='demo'),
 ]
