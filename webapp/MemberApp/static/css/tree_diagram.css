@@ -1,0 +1,34 @@
+svg {
+    width: 100%;
+    height: 70%;    
+}
+
+g {
+    height: auto;
+}
+
+.node circle {
+    stroke: rgb(0, 255, 55);
+    stroke-width: 3px;
+}
+
+.node text { 
+    font: 20px sans-serif;
+    fill: #fff;  
+}
+
+.link {
+    fill: none;
+    stroke: rgb(187, 187, 187);
+    stroke-width: 5px;
+}
+
+.tree-container {
+    height: auto;
+    text-align: center;
+    /* background-color: rgba(73, 73, 73, 0.603); */
+}
+
+.tree-content {
+    height: auto;
+}
