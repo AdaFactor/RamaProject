@@ -1,5 +1,8 @@
 .member-container {
     margin-top: 7em;
+    /* margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 5em;  */
 }
 
 .card {
@@ -77,4 +80,19 @@ input[type="button"] {
     border: none;
     border-left: 2px solid #ff0000;
     background-color: rgb(255, 255, 255);
+}
+
+.head-profile {
+    color: #fff;
+    padding: 10px;
+    border-top-right-radius: 8px;              
+    border-top-left-radius: 8px;                  
+    background-color: #1b1b1b;
+}
+
+.content-profile {
+    padding: 10px 30px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;              
+    background-color: #fff;
 }

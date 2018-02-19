@@ -1,0 +1,44 @@
+{% extends "./base_site.html" %}
+
+{% block style %}
+    <link href="/static/css/admin-menu.css" rel="stylesheet" />
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="content admin-menu">
+            <div class="row">
+                <a href="">
+                    <div class="col-lg-6 management text-center">
+                        <img src="https://png.icons8.com/ios/250/ffffff/database-filled.png" />
+                        <h1>Management</h1>
+                    </div>
+                </a>
+
+                <div class="col-lg-6">
+                    <a href="">
+                        <div class="row report">
+                            <div class="col-lg-5 text-center">
+                                    <img src="https://png.icons8.com/wired/190/ffffff/combo-chart.png">                            
+                            </div>
+                            <div class="col-lg-7 report-text">
+                                <h1>Report</h1>                           
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="row import">
+                            <div class="col-lg-5 text-center">
+                                <img src="https://png.icons8.com/wired/190/ffffff/database-import.png">                            
+                            </div>
+                            <div class="col-lg-7 report-text">
+                                <h1>Import</h1>                           
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
