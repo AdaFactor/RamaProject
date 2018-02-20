@@ -8,33 +8,41 @@
 {% block content %}
     <div class="container">
         <div class="content member-container">
-            {% comment %} <div class="row">
-                <div class="col-lg-5">
-                    <div class="head-profile text-center">
-                        <img src="https://png.icons8.com/office/150/000000/administrator-male.png" class="user" >                            
-                        <h3>นายชื่อกส นามสกุล</h3>
-                        <h5>เลขบัตรประชาชน: 1234567890123</h5>
-                    </div>
-                    <div class="content-profile">
-                        <p for="">เพศ: ชาย</p>
-                        <p for="">วันเกิด: dd/mm/yyyy</p>
-                        <p for="">ที่อยู่: 123 ม.4 ต.ในเมือง อ.เมือง จ.นครราชสีมา 30000</p>
-                        <p for="">เบอร์โทรศัพท์: 0812345678</p>
-                        <p for="">อีเมล: a@gmail.com</p>
-                        
-                    </div>
+            <div class="row profile">
+                <div class="col-lg-6 head-profile text-center">
+                    <img src="https://png.icons8.com/office/150/000000/administrator-male.png" class="user" ><br>                            
+                    <label class="h3" id="#id_prefix">นาย</label>
+                    <label class="h3" id="#id_first_name">ชื่อ</label>
+                    <label class="h3" id="#id_last_name">นามสกุล</label>                                                            
+                    <h5 id="citizen_id">เลขบัตรประชาชน: 1234567890123</h5>
                 </div>
-                <div class="col-lg-7">
-                    <div class="tree-container">
-                            <div class="tree-content"></div>            
+                <div class="col-lg-6 content-profile">
+                    <div class="member-content">
+                        <p for="" id="id_date_birth">วันเกิด: dd/mm/yyyy</p>                                        
+                        <p for="" id="id_gender">เพศ: ชาย</p>
+                        <p for="" id="id_address">ที่อยู่: 123 ม.4 ต.ในเมือง อ.เมือง จ.นครราชสีมา 30000</p>
+                        <p for="" id="id_phone_no">เบอร์โทรศัพท์: 0812345678</p>
+                        <p for="" id="id_email">อีเมล: a@gmail.com</p>
+                    </div>
+                    
+                    <div class="row status">
+                        <p for="reference_person" id="id_reference_person" class="text-center">ผู้แนะนำ: ชื่อ-สกุล</p>
+                        <div class="col-lg-6">
+                            <p for="paid" id="id_paid">สถานะการชำระเงิน:</p>
+                            <p for="paid_date" id="id_paid_date">วันที่ชำระเงิน: dd/mm/yyyy</p>
                         </div>
+                        <div class="col-lg-6">
+                            <p for="registered_datetime" id="id_registered_datetime">วันที่สมัคร: dd/mm/yyyy</p>                
+                            <p for="expiry_date" id="id_expiry_date">วันหมดอายุ: dd/mm/yyyy</p>
+                        </div>
+                    </div>
                 </div>
-            </div> {% endcomment %}
-            <div class="card">
+            </div>
+
+            <!-- <div class="card">
                 <div class="row">
-                    <div class="col-lg-3 text-center">
+                    <div class="col col-lg-3 text-center">
                         <img src="https://png.icons8.com/office/200/000000/administrator-male.png" class="user" />
-                        <input type="hidden" class="btn btn-info btn-block" value="อัพโหลดรูป" />                       
                     </div>
                     <div class="col-lg-9">
                         <div class="info">
@@ -81,11 +89,11 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <div class="relationship">
                 <div class="row">
-                    <div class="col-lg-4">
+                    <!-- <div class="col-lg-4">
                         <div class="relation">
                             <label for="reference_person" id="id_reference_person">ผู้แนะนำ: ชื่อ-สกุล</label>
                         </div>
@@ -97,9 +105,9 @@
                             <label for="registered_datetime" id="id_registered_datetime">วันที่สมัคร: dd/mm/yyyy</label><br>                
                             <label for="expiry_date" id="id_expiry_date">วันหมดอายุ: dd/mm/yyyy</label>
                         </div>
-                    </div>
+                    </div> -->
 
-                    <div class="col-lg-8">
+                    <div class="col-lg-12 text-center">
                         <div class="tree-container">
                             <div class="tree-content"></div>            
                         </div>
@@ -181,8 +189,8 @@
         }];
         
         // ************** Generate the tree diagram	 *****************
-        var margin = {top: 50, right: 0, bottom: 0, left: 0},
-            width = 800;
+        //var margin = {top: 50, right: 0, bottom: 0, left: 0};
+        var width = 800;
             
         var i = 0;
         
@@ -197,7 +205,10 @@
         var svg = d3.select(".tree-content").append("svg")
             .attr('height', '100%')
             .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            .attr("transform", "-ms-translate(150, 50)")
+            .attr("transform", "-webkit-translate(150, 50)")
+            .attr("transform", "translate(150, 50)");
+            
            
         root = data[0];
             
@@ -227,6 +238,7 @@
                     return "translate(" + d.x + "," + d.y + ")";
                 });
             
+            
             nodeEnter.append("image")
                 .attr("xlink:href", (d) => { 
                     return d.icon; 
@@ -235,6 +247,8 @@
                 .attr("y", "-20px")
                 .attr("width", "40px")
                 .attr("height", "40px");
+            
+           
             //nodeEnter.append("circle")
             //    .attr("r", 20)
             //    .style("fill", "#fff");

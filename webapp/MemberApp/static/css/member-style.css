@@ -10,7 +10,7 @@
     border-radius: 5px; 
     padding: 10px 20px;
     margin: 20px 0;
-    background-color: rgba(255, 255, 255, 0.562);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .info {
@@ -23,8 +23,8 @@ select, input {
     margin-right: 6px;
     border: none;
     outline: none;
-    border-bottom: 2px solid #000000; 
-    background: rgb(255, 255, 255);
+    border-bottom: 2px solid #a5a5a5; 
+    background-color: rgba(255, 255, 255, 0);
 }
 
 input {
@@ -72,7 +72,7 @@ input[type="button"] {
     margin-top: 10px;
 }
 
-.relation {
+/* .relation {
     display: block;
     padding: 10px 10px;
     margin: 10px 5px;
@@ -80,19 +80,37 @@ input[type="button"] {
     border: none;
     border-left: 2px solid #ff0000;
     background-color: rgb(255, 255, 255);
-}
+} */
 
 .head-profile {
-    color: #fff;
     padding: 10px;
-    border-top-right-radius: 8px;              
-    border-top-left-radius: 8px;                  
-    background-color: #1b1b1b;
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;    
+    background-color: rgba(255, 217, 0, 0.9);
 }
 
 .content-profile {
     padding: 10px 30px;
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;              
-    background-color: #fff;
+    float: none;
+    display: table-cell;
+    vertical-align: top;  
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;          
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.profile {
+    display: table;
+    width: 100%;
+}
+
+.status {
+    padding-top: 10px;
+}
+
+.member-content {
+    border-bottom: 1px solid #353535;    
 }
