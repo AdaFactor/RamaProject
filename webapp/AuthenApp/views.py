@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.core.mail import send_mail
 from .forms import RegistrationForm
 
 def registration(request):
@@ -8,6 +9,13 @@ def registration(request):
             new_member = form.save(commit=False)
             new_member.expiry_date = new_member.cal_expiry_date()
             new_member.save()
+            send_mail(
+                'Ada Test Email System',
+                'Testing massage is ready for Email system',
+                'arkane.ka@adafactor.com',
+                ['adadesions@gmail.com'],
+                fail_silently=False
+            )
             return redirect('StaticPageApp:landing')
             
     form = RegistrationForm(request)
