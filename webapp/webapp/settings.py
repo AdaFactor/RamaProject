@@ -130,4 +130,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 GRAPPELLI_ADMIN_TITLE = 'RamaProject'
-CRISPY_TEMPLATE_PACK = "bootstrap3"
+CRISPY_TEMPLATE_PACK = 'bootstrap3'
+
+EMAIL_USE_SSL = True
+EMAIL_PORT = 465
+EMAIL_HOST = 'smtp.zoho.com'
+EMAIL_HOST_USER = 'arkane.ka@adafactor.com'
+EMAIL_HOST_PASSWORD = 'Arkane1902'
+SERVER_EMAIL = 'arkane.ka@adafactor.com'
