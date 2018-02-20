@@ -8,7 +8,7 @@
 {% block content %}
     <div class="container">
         <div class="content member-container">
-            <div class="row profile">
+            <!-- <div class="row profile">
                 <div class="col-lg-6 head-profile text-center">
                     <img src="https://png.icons8.com/office/150/000000/administrator-male.png" class="user" ><br>                            
                     <label class="h3" id="#id_prefix">นาย</label>
@@ -37,9 +37,9 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="card">
+            <div class="card">
                 <div class="row">
                     <div class="col col-lg-3 text-center">
                         <img src="https://png.icons8.com/office/200/000000/administrator-male.png" class="user" />
@@ -89,11 +89,11 @@
                         </div>
                     </div>
                 </div>
-            </div> -->
+            </div>
 
             <div class="relationship">
                 <div class="row">
-                    <!-- <div class="col-lg-4">
+                    <div class="col-lg-4">
                         <div class="relation">
                             <label for="reference_person" id="id_reference_person">ผู้แนะนำ: ชื่อ-สกุล</label>
                         </div>
@@ -105,9 +105,9 @@
                             <label for="registered_datetime" id="id_registered_datetime">วันที่สมัคร: dd/mm/yyyy</label><br>                
                             <label for="expiry_date" id="id_expiry_date">วันหมดอายุ: dd/mm/yyyy</label>
                         </div>
-                    </div> -->
+                    </div>
 
-                    <div class="col-lg-12 text-center">
+                    <div class="col-lg-8">
                         <div class="tree-container">
                             <div class="tree-content"></div>            
                         </div>
@@ -205,9 +205,9 @@
         var svg = d3.select(".tree-content").append("svg")
             .attr('height', '100%')
             .append("g")
-            .attr("transform", "-ms-translate(150, 50)")
-            .attr("transform", "-webkit-translate(150, 50)")
-            .attr("transform", "translate(150, 50)");
+            .attr("transform", "-ms-translate(0, 50)")
+            .attr("transform", "-webkit-translate(0, 50)")
+            .attr("transform", "translate(0, 50)");
             
            
         root = data[0];
