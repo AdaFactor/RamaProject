@@ -23,3 +23,9 @@ def registration(request):
 
 def login(request):
     return render(request, 'AuthenApp/login.html')
+
+def warning(request):
+    return render(request, 'AuthenApp/warning.html')
+
+def member(request):
+    return render(request, 'AuthenApp/member.html')

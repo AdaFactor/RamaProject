@@ -16,6 +16,9 @@ def landing(request):
 def demo(request):
     return render(request, 'StaticPageApp/demo_tree.html')
 
+def adminmenu(request):
+    return render(request, 'StaticPageApp/admin_menu.html')
+
 # def new_member(request):
 #     if request.POST:
 #         form = MemberForm(request, data=request.POST)

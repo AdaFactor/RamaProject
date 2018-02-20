@@ -1,0 +1,282 @@
+{% extends "StaticPageApp/base_site.html" %}
+
+{% block style %}
+    <link rel="stylesheet" href="/static/css/member-style.css">
+    <link rel="stylesheet" href="/static/css/tree_diagram.css">
+{% endblock style %}
+
+{% block content %}
+    <div class="container">
+        <div class="content member-container">
+            <!-- <div class="row profile">
+                <div class="col-lg-6 head-profile text-center">
+                    <img src="https://png.icons8.com/office/150/000000/administrator-male.png" class="user" ><br>                            
+                    <label class="h3" id="#id_prefix">นาย</label>
+                    <label class="h3" id="#id_first_name">ชื่อ</label>
+                    <label class="h3" id="#id_last_name">นามสกุล</label>                                                            
+                    <h5 id="citizen_id">เลขบัตรประชาชน: 1234567890123</h5>
+                </div>
+                <div class="col-lg-6 content-profile">
+                    <div class="member-content">
+                        <p for="" id="id_date_birth">วันเกิด: dd/mm/yyyy</p>                                        
+                        <p for="" id="id_gender">เพศ: ชาย</p>
+                        <p for="" id="id_address">ที่อยู่: 123 ม.4 ต.ในเมือง อ.เมือง จ.นครราชสีมา 30000</p>
+                        <p for="" id="id_phone_no">เบอร์โทรศัพท์: 0812345678</p>
+                        <p for="" id="id_email">อีเมล: a@gmail.com</p>
+                    </div>
+                    
+                    <div class="row status">
+                        <p for="reference_person" id="id_reference_person" class="text-center">ผู้แนะนำ: ชื่อ-สกุล</p>
+                        <div class="col-lg-6">
+                            <p for="paid" id="id_paid">สถานะการชำระเงิน:</p>
+                            <p for="paid_date" id="id_paid_date">วันที่ชำระเงิน: dd/mm/yyyy</p>
+                        </div>
+                        <div class="col-lg-6">
+                            <p for="registered_datetime" id="id_registered_datetime">วันที่สมัคร: dd/mm/yyyy</p>                
+                            <p for="expiry_date" id="id_expiry_date">วันหมดอายุ: dd/mm/yyyy</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="card">
+                <div class="row">
+                    <div class="col col-lg-3 text-center">
+                        <img src="https://png.icons8.com/office/200/000000/administrator-male.png" class="user" />
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="info">
+                            <select name="prefix" id="id_prefix" disabled="true">
+                                <option value="Mr">นาย</option>
+                                <option value="Mrs">นาง</option>
+                                <option value="Ms">นางสาว</option>                                                        
+                            </select>
+                            <input type="text" name="first_name" id="id_first_name" maxlength="64" placeholder="ชื่อ" value="name" readonly />
+                            <input type="text" name="last_name" id="id_last_name" maxlength="64" placeholder="นามสกุล" readonly />
+                        </div>
+
+                        <div class="info">
+                            <label for="">เพศ:</label>
+                            <select name="gender" id="id_gender" disabled="true">
+                                <option value="m">ชาย</option>
+                                <option value="w">หญิง</option>
+                                <option value="x">ไม่ระบุ</option>                                                        
+                            </select>
+                            <label for="">เลขบัตรประชาชน:</label>                            
+                            <input type="text" name="citizen_id" id="citizen_id" placeholder="เลขบัตรประชาชน" readonly />
+                            <label for="">วันเกิด:</label>
+                            <input type="date" name="date_birth" id="id_date_birth" placeholder="วันเกิด" readonly />
+                        </div>
+
+                        <div class="info">
+                            <label for="">เบอร์โทรศัพท์:</label>                          
+                            <input type="text" name="phone" id="id_phone" maxlength="10" placeholder="เบอร์โทรศัพท์" readonly />
+                            <label for="">อีเมล:</label>                           
+                            <input type="email" name="email" id="id_email" maxlength="120" placeholder="อีเมล" readonly />                            
+                        </div>  
+
+                        <div class="info">
+                            <label for="address">ที่อยู่:</label>                                                     
+                            <input type="text" name="house_no" id="id_house_no" placeholder="เลขที่" readonly />
+                            <input type="text" name="resident_name" id="id_resident_name" placeholder="หมู่บ้าน" readonly />                
+                            <input type="text" name="village_no" id="id_village_no" placeholder="หมู่" readonly />
+                            <input type="text" name="alley" id="id_alley" placeholder="ซอย" readonly />
+                            <input type="text" name="road" id="id_road" placeholder="ถนน" readonly />
+                            <input type="text" name="area" id="id_area" placeholder="ตำบล" readonly />
+                            <input type="text" name="sub_area" id="id_sub_area" placeholder="อำเภอ" readonly />
+                            <input type="text" name="province" id="id_province" placeholder="จังหวัด" readonly />
+                            <input type="text" name="post_code" id="id_post_code" placeholder="รหัสไปรษณีย์" readonly /> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relationship">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="relation">
+                            <label for="reference_person" id="id_reference_person">ผู้แนะนำ: ชื่อ-สกุล</label>
+                        </div>
+                        <div class="relation">
+                            <label for="paid" id="id_paid">สถานะการชำระเงิน:</label><br>
+                            <label for="paid_date" id="id_paid_date">วันที่ชำระเงิน: dd/mm/yyyy</label>
+                        </div>
+                        <div class="relation">
+                            <label for="registered_datetime" id="id_registered_datetime">วันที่สมัคร: dd/mm/yyyy</label><br>                
+                            <label for="expiry_date" id="id_expiry_date">วันหมดอายุ: dd/mm/yyyy</label>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-8">
+                        <div class="tree-container">
+                            <div class="tree-content"></div>            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block scripts %}
+    <script src="http://d3js.org/d3.v3.min.js"></script>    
+    <script>
+        var data = [{
+            "name": "User1",
+            "parent": "null",
+            "icon": "https://png.icons8.com/office/100/000000/user-female-skin-type-4.png",
+            "children": [
+                {
+                    "name": "User2",
+                    "parent": "Chairman",
+                    "icon": "https://png.icons8.com/color/100/000000/user-female-skin-type-4.png",                    
+                    "children": [
+                        {
+                            "name": "User4",
+                            "parent": "Vice Chairman",
+                            "icon": "https://png.icons8.com/color/100/000000/user-male.png",
+                            "children":[
+                                {
+                                    "name": "User6",
+                                    "parent": "Vice Chairman",
+                                    "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",
+                                },{
+                                    "name": "User7",
+                                    "parent": "Vice Chairman",
+                                    "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",
+                                },
+                            ]                            
+                        }, 
+                        {
+                            "name": "User5",
+                            "parent": "Vice Chairman",
+                            "icon": "https://png.icons8.com/color/100/000000/user-male-skin-type-6.png",                            
+                        },
+                    ]
+                }, {
+                    "name": "User3",
+                    "parent": "Chairman",
+                    "icon": "https://png.icons8.com/office/80/000000/user-male-skin-type-5.png",                    
+                    "children": [
+                        {
+                            "name": "User6",
+                            "parent": "Vice Chairman",
+                            "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",                            
+                        }, {
+                            "name": "User7",
+                            "parent": "Vice Chairman",
+                            "icon": "https://png.icons8.com/color/80/000000/name.png",
+                            "children":[
+                                {
+                                    "name": "User8",
+                                    "parent": "Vice Chairman",
+                                    "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",
+                                    "children": [
+                                        {"name": "User8",
+                                        "parent": "Vice Chairman",
+                                        "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",}
+                                    ]
+                                },{
+                                    "name": "User9",
+                                    "parent": "Vice Chairman",
+                                    "icon": "https://png.icons8.com/color/80/000000/user-male-skin-type-1-2.png",
+                                },
+                            ]                             
+                        },
+                    ]
+                }
+            ]
+        }];
+        
+        // ************** Generate the tree diagram	 *****************
+        //var margin = {top: 50, right: 0, bottom: 0, left: 0};
+        var width = 800;
+            
+        var i = 0;
+        
+        var tree = d3.layout.tree()
+            .size([width, 0]);
+        
+        var diagonal = d3.svg.diagonal()
+            .projection((d) => { 
+                return [d.x, d.y]; 
+            });
+        
+        var svg = d3.select(".tree-content").append("svg")
+            .attr('height', '100%')
+            .append("g")
+            .attr("transform", "-ms-translate(0, 50)")
+            .attr("transform", "-webkit-translate(0, 50)")
+            .attr("transform", "translate(0, 50)");
+            
+           
+        root = data[0];
+            
+        update(root);
+        
+        function update(source) {
+        
+            // Compute the new tree layout.
+            var nodes = tree.nodes(root).reverse(),
+                links = tree.links(nodes);
+        
+            // Normalize for fixed-depth.
+            nodes.forEach((d) => { 
+                d.y = d.depth * 100; 
+            });
+        
+            // Declare the nodes…
+            var node = svg.selectAll("g.node")
+                .data(nodes, (d) => { 
+                    return d.id || (d.id = ++i); 
+                });
+        
+            // Enter the nodes.
+            var nodeEnter = node.enter().append("g")
+                .attr("class", "node")
+                .attr("transform", (d) => { 
+                    return "translate(" + d.x + "," + d.y + ")";
+                });
+            
+            
+            nodeEnter.append("image")
+                .attr("xlink:href", (d) => { 
+                    return d.icon; 
+                })
+                .attr("x", "-20px")
+                .attr("y", "-20px")
+                .attr("width", "40px")
+                .attr("height", "40px");
+            
+           
+            //nodeEnter.append("circle")
+            //    .attr("r", 20)
+            //    .style("fill", "#fff");
+        
+            nodeEnter.append("text")
+                .attr("y", (d) => {
+                    return d.children; 
+                    //return d.children || d._children ? -18 : 18; 
+                })
+                .attr("dy", "2em")
+                .attr("text-anchor", "middle")
+                .text((d) => { 
+                    return d.name; 
+                })
+                .style("fill-opacity", 1);
+        
+            // Declare the links…
+            var link = svg.selectAll("path.link")
+                .data(links, (d) => { 
+                    return d.target.id; 
+                });
+        
+            // Enter the links.
+            link.enter().insert("path", "g")
+                .attr("class", "link")
+                .attr("d", diagonal);
+        
+        }
+
+    </script>
+{% endblock scripts %}
