@@ -16,7 +16,7 @@
         },
         nodeStructure: {
             text: {
-                name: "name"
+                name: "firstname lastname"
             },
             link: {
                 href: "http://www.google.com"
@@ -25,7 +25,7 @@
             children: [
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -34,7 +34,7 @@
                     children: [
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -45,7 +45,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -54,7 +54,7 @@
                     children: [
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -63,7 +63,7 @@
                         },
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -74,7 +74,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -83,7 +83,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
