@@ -2,6 +2,9 @@
     var chart_config = {
         chart: {
             container: "#collapsable-example",
+            node: {
+                HTMLclass: 'node1'
+            },
             connectors: {
                 type: "curve",
                 style: {
