@@ -12,14 +12,13 @@
                 <img src="/static/images/nine.png" class="img-responsive center-block" width="auto" height="50px" alt="Responsive image" />
                 
                 <div id="login-form">
-                    <form action="#">
+                    <form action={% url 'AuthenApp:signin' %} method=POST>
+                        {% csrf_token %}
                         <h4 class="motto">เข้าสู่ระบบ ชมรมคนรักในหลวง</h4>
-                        
-                        <input type="text" class="username" placeholder="Username">
-                        <input type="password" class="password" placeholder="Password">
-    
+                        <input type="text" class="username" name="username" placeholder="Username">
+                        <input type="password" class="password" name="password" placeholder="Password">
                         <div class="btn-login">
-                            <a class="btn btn-success btn-fill" href="#" role="button">LOGIN</a>                        
+                            <button type='submit' class="btn btn-success btn-fill" role="button">LOGIN</button>      
                         </div>
                         <div class="forget">
                             <a class="forget-password" id="forget-pw">forget password</a>
