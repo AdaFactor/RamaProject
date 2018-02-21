@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from .forms import RegistrationForm
 
 def registration(request):
@@ -32,6 +32,10 @@ def signin(request):
             return redirect('/member/profile')
 
     return render(request, 'AuthenApp/login.html')
+
+def signout(request):
+    logout(request)
+    return redirect('/')
 
 def warning(request):
     return render(request, 'AuthenApp/warning.html')

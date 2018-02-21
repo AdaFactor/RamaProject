@@ -23,6 +23,5 @@ urlpatterns = [
     path('member/', include('MemberApp.urls')),
     path('dataprocessing/', include('DataProcessingApp.urls')),
     path('grappelli/', include('grappelli.urls')),
-    path('admin-menu/', view=demo, name='admin_menu'),
     path('admin/', admin.site.urls),
 ]
