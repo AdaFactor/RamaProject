@@ -5,7 +5,7 @@ $(document).ready(()=>{
         animationEnabled: true,
         theme: "light1",
         title: {
-            text: "Daily Sales Data"
+            text: "สรุปยอดสมาชิกในแต่ละอำเภอ"
         },
         axisX: {
             title: "อำเภอ",
