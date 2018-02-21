@@ -2,6 +2,9 @@
     var chart_config = {
         chart: {
             container: "#collapsable-example",
+            node: {
+                HTMLclass: 'node1'
+            },
             connectors: {
                 type: "curve",
                 style: {
@@ -13,7 +16,7 @@
         },
         nodeStructure: {
             text: {
-                name: "name"
+                name: "firstname lastname"
             },
             link: {
                 href: "http://www.google.com"
@@ -22,7 +25,7 @@
             children: [
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -31,7 +34,7 @@
                     children: [
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -42,7 +45,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -51,7 +54,7 @@
                     children: [
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -60,7 +63,7 @@
                         },
                         {
                             text: {
-                                name: "name"
+                                name: "firstname lastname"
                             },
                             link: {
                                 href: "http://www.google.com"
@@ -71,7 +74,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"
@@ -80,7 +83,7 @@
                 },
                 {
                     text: {
-                        name: "name"
+                        name: "firstname lastname"
                     },
                     link: {
                         href: "http://www.google.com"

@@ -15,23 +15,29 @@ abbr,acronym { border:0; } */
     width: 100%; 
     
 }
-.Treant > .node { 
-    text-align: center;
-    color: #000000;
-    text-decoration: none;
-    border: 1px solid #484848; 
-    border-radius: 3px; 
-    background-color: #DEF82D;     
+
+.Treant > .node {
+    text-decoration: none;    
+    text-align: center;    
+    color: #fff;
 }
-.Treant > .node img { 
+
+.Treant > .node img {    
     width: 80px; 
     height: 80px;
+    text-align: center;        
 }
 
 .Treant .collapse-switch { 
     width: 100%; 
     height: 100%; 
-    border: none; 
+    border: none;
 }
-.Treant .node.collapsed { background-color: #DEF82D; }
-.Treant .node.collapsed .collapse-switch { background: none; }
+
+.Treant .node.collapsed { 
+    background-color: #DEF82D; 
+}
+
+.Treant .node.collapsed .collapse-switch {
+    background: none; 
+}
