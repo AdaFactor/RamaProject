@@ -1,0 +1,36 @@
+form {
+    margin-bottom: 50px;
+}
+
+.head-registation {
+    padding: 10px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 16px;
+}
+
+input[name="submit"] {
+    font-size: 18px;
+}
+
+.information {
+    padding-top: 10px;
+    border-right: 1px solid #fff;
+    /* background-color: rgba(0, 81, 92, 0.5);     */
+}
+
+.address {
+    padding-top: 10px;
+    border-left: 1px solid #fff;    
+    /* background-color: rgba(2, 118, 134, 0.5); */
+}
+
+.reference {
+    margin-bottom: 10px;
+    padding-top: 10px;    
+    /* background-color: rgba(0, 174, 180, 0.5); */
+}

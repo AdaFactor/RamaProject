@@ -5,10 +5,169 @@
     Registration
 {% endblock title %}
 
+{% block style %}
+    <link rel="stylesheet" href="/static/css/registation.css">
+{% endblock style %}
+
 {% block content %}
     <div class="container">
         <div class="content registration-form">
-            {% crispy form %}
+            <form action="" method="post">
+                <fieldset>
+                    <legend class="head-registation">ลงทะเบียนสมาชิกใหม่:</legend>
+                    <div class="row">
+                        {% comment %} left {% endcomment %}
+                        <div class="col-lg-6 information">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="id_image">อัพโหลดรูปภาพ: </label>
+                                        <input type="file" name="image" class="form-control" id="id_image">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="id_prefix" class="control-label">คำนำหน้า: </label>
+                                        <select name="prefix" class="select form-control" required id="id_prefix">
+                                            <option value="" selected>---</option>                    
+                                            <option value="Mr">นาย</option>
+                                            <option value="Mrs">นาง</option>
+                                            <option value="Ms">นางสาว</option>                    
+                                        </select>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_first_name" class="control-label">ชื่อ: </label>
+                                <input type="text" name="first_name" maxlength="64" class="form-control" required id="id_first_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_last_name" class="control-label">นามสกุล: </label>
+                                <input type="text" name="last_name" maxlength="64" class="form-control" required id="id_last_name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_citizen_id" class="control-label">เลขบัตรประจำตัวประชาชน: </label>
+                                <input type="text" name="citizen_id" maxlength="13" class="form-control" required id="id_citizen_id">
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="id_gender" class="control-label">เพศ: </label>
+                                        <select name="gender" class="form-control" required id="id_gender">
+                                            <option value="" selected>---</option>                    
+                                            <option value="m">ชาย</option>
+                                            <option value="f">หญิง</option>
+                                            <option value="x">ไม่ระบุ</option>                    
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="id_date_birth" class="control-label">วันเกิด: </label>
+                                        <input type="date" name="date_birth" class="dateinput form-control" required id="id_date_birth">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_phone_no" class="control-label">โทรศัพท์: </label>
+                                <input type="text" name="phone_no" class="form-control" required id="id_phone_no">
+                            </div>
+
+                        </div>
+
+                        {% comment %} right {% endcomment %}
+                        <div class="col-lg-6 address">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="id_house_no">บ้านเลขที่:</label>
+                                        <input type="text" name="house_no" maxlength="8" class="form-control" required id="id_house_no">
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <label for="id_resident_name" class="text-right">หมู่บ้าน:</label>                            
+                                        <input type="text" name="resident_name" maxlength="64" class="form-control" required id="id_resident_name"> 
+                                    </div>
+                                </div>                              
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <label for="id_village_no">หมู่:</label>                            
+                                        <input type="text" name="village_no" maxlength="3" class="form-control" required id="id_village_no">                            
+                                    </div>
+                                    <div class="col-lg-8">
+                                        <label for="id_alley">ซอย:</label>
+                                        <input type="text" name="alley" maxlength="32" class="form-control" required id="id_alley"> 
+                                    </div>
+                                </div>                    
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="id_road">ถนน:</label>                                
+                                        <input type="text" name="alley" maxlength="32" class="form-control" required id="id_alley">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="id_area">ตำบล:</label>
+                                        <input type="text" name="area" maxlength="32" class="form-control" required id="id_area">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <label for="id_subarea">อำเภอ:</label>                            
+                                        <input type="text" name="subarea" maxlength="32" class="form-control" required id="id_subarea">                                            
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <label for="id_province">จังหวัด:</label>                            
+                                        <input type="text" name="province" maxlength="32" class="form-control" required id="id_province">                            
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_post_code">รหัสไปรษณีย์:</label>
+                                <input type="text" name="post_code" maxlength="5" class="form-control" required id="id_post_code">                                                                
+                            </div>
+
+                            <div class="form-group">
+                                <label for="id_email" class="control-label">อีเมล: </label>
+                                <input type="email" name="email" maxlength="128" class="form-control" required id="id_email">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row reference">
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label for="id_reference_person">ผู้แนะนำ: </label>
+                                <input type="text" name="reference_person" class="form-control" required id="id_reference_person">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="submit" name="submit" value="ยืนยัน" class="btn btn-success btn-block" id="submit-id-submit">
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
 {% endblock content %}
+
+{% block script %}
+    <script>
+        $(document).ready(function(){
+            $("#id_reference_person").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                    ///--- code funtion
+            });
+        });
+    </script>
+{% endblock script %}
