@@ -2,6 +2,12 @@
   "th": {
     "tambons": [
       {
+        "pid": "300101",
+        "name": "ในเมือง",
+        "amphoe_pid": "3001",
+        "changwat_pid": "30"
+      },
+      {
         "pid": "300102",
         "name": "โพธิ์กลาง",
         "latitude": 14.906,
