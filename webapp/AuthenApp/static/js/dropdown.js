@@ -1,6 +1,8 @@
 $(document).ready(() => {
-    const urlAmphoes = "/static/json/subarea.json";    
-    const urlTambons = "/static/json/area.json";
+    // const urlAmphoes = "/static/json/subarea.json";    
+    // const urlTambons = "/static/json/area.json";
+    const urlAmphoes = "https://cdn.rawgit.com/AdaFactor/thai-tambons/f2b52554/amphoes/json/th.json";    
+    const urlTambons = "https://cdn.rawgit.com/sirimainson/thai-tambons/4aaaec95/tambons/json/th.json";
 
     $.ajax({
         url: urlAmphoes,
@@ -18,9 +20,11 @@ $(document).ready(() => {
                     return 0;
                 });
                 for(var amphoes = 0; amphoes <= itemAmphoes.length; amphoes++){
-                    $("#id_subarea").append(
-                        '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
-                    );
+                    if(itemAmphoes[amphoes].changwat_pid == "30") {
+                        $("#id_subarea").append(
+                            '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
+                        );
+                    };
                 };
             });
         },
@@ -31,6 +35,7 @@ $(document).ready(() => {
 
     $("#id_subarea").change(() => {
         var subarea = $("#id_subarea").val();
+        console.log(subarea);
         $("#id_area").empty();
         $.ajax({
             url: urlTambons,
