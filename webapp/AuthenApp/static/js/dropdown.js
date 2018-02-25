@@ -1,6 +1,8 @@
 $(document).ready(() => {
-    const urlAmphoes = "/static/json/subarea.json";    
-    const urlTambons = "/static/json/area.json";
+    // const urlAmphoes = "/static/json/subarea.json";    
+    // const urlTambons = "/static/json/area.json";
+    const urlAmphoes = "https://cdn.rawgit.com/AdaFactor/thai-tambons/f2b52554/amphoes/json/th.json";    
+    const urlTambons = "https://cdn.rawgit.com/sirimainson/thai-tambons/e164d0cc/tambons/json/th.json";
 
     $.ajax({
         url: urlAmphoes,
@@ -18,9 +20,11 @@ $(document).ready(() => {
                     return 0;
                 });
                 for(var amphoes = 0; amphoes <= itemAmphoes.length; amphoes++){
-                    $("#id_subarea").append(
-                        '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
-                    );
+                    if(itemAmphoes[amphoes].changwat_pid == "30") {
+                        $("#id_subarea").append(
+                            '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
+                        );
+                    };
                 };
             });
         },
@@ -53,7 +57,6 @@ $(document).ready(() => {
                             $("#id_area").append(
                                 '<option value="'+ itemTambons[tambons].pid +'">'+ itemTambons[tambons].name +'</option>'
                             );
-                            console.log(itemTambons[tambons].amphoe_pid);
                         };
                     };
                 });
