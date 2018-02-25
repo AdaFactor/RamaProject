@@ -34,3 +34,9 @@ input[name="submit"] {
     padding-top: 10px;    
     /* background-color: rgba(0, 174, 180, 0.5); */
 }
+
+datalist {
+    overflow-y: scroll;
+    width: 20px;
+    height: 24px;
+}

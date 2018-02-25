@@ -1,0 +1,166 @@
+{
+    "th": {
+        "amphoes": [
+        {
+            "pid": "3001",
+            "name": "เมืองนครราชสีมา",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3002",
+            "name": "ครบุรี",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3003",
+            "name": "เสิงสาง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3004",
+            "name": "คง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3005",
+            "name": "บ้านเหลื่อม",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3006",
+            "name": "จักราช",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3007",
+            "name": "โชคชัย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3008",
+            "name": "ด่านขุนทด",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3009",
+            "name": "โนนไทย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3010",
+            "name": "โนนสูง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3011",
+            "name": "ขามสะแกแสง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3012",
+            "name": "บัวใหญ่",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3013",
+            "name": "ประทาย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3014",
+            "name": "ปักธงชัย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3015",
+            "name": "พิมาย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3016",
+            "name": "ห้วยแถลง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3017",
+            "name": "ชุมพวง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3018",
+            "name": "สูงเนิน",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3019",
+            "name": "ขามทะเลสอ",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3020",
+            "name": "สีคิ้ว",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3021",
+            "name": "ปากช่อง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3022",
+            "name": "หนองบุญมาก",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3023",
+            "name": "แก้งสนามนาง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3024",
+            "name": "โนนแดง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3025",
+            "name": "วังน้ำเขียว",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3026",
+            "name": "เทพารักษ์",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3027",
+            "name": "เมืองยาง",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3028",
+            "name": "พระทองคำ",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3029",
+            "name": "ลำทะเมนชัย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3030",
+            "name": "บัวลาย",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3031",
+            "name": "สีดา",
+            "changwat_pid": "30"
+        },
+        {
+            "pid": "3032",
+            "name": "เฉลิมพระเกียรติ",
+            "changwat_pid": "30"
+        }
+        ]
+    }
+}

@@ -112,8 +112,10 @@
                                         <input type="text" name="alley" maxlength="32" class="form-control" required id="id_alley">
                                     </div>
                                     <div class="col-lg-6">
-                                        <label for="id_area">ตำบล:</label>
-                                        <input type="text" name="area" maxlength="32" class="form-control" required id="id_area">
+                                        <label for="id_subarea">อำเภอ:</label>
+                                        <select name="subarea" class="form-control" id="id_subarea">
+                                            <option value="" selected>เลือกอำเภอ</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -121,12 +123,16 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label for="id_subarea">อำเภอ:</label>                            
-                                        <input type="text" name="subarea" maxlength="32" class="form-control" required id="id_subarea">                                            
+                                        <label for="id_area">ตำบล:</label>
+                                        <select name="area" class="form-control" id="id_area">
+                                            <option value="" selected>เลือกตำบล</option>
+                                        </select>
                                     </div>
                                     <div class="col-lg-6">
-                                        <label for="id_province">จังหวัด:</label>                            
-                                        <input type="text" name="province" maxlength="32" class="form-control" required id="id_province">                            
+                                        <label for="id_province">จังหวัด:</label>
+                                        {% comment %} <input type="text" list="id_province" class="form-control">                                        
+                                        <datalist id="id_province"></datalist> {% endcomment %}
+                                        <input type="text" name="province" value="นครราชสีมา" class="form-control" id="id_province" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -161,13 +167,7 @@
     </div>
 {% endblock content %}
 
-{% block script %}
-    <script>
-        $(document).ready(function(){
-            $("#id_reference_person").on("keyup", function() {
-                var value = $(this).val().toLowerCase();
-                    ///--- code funtion
-            });
-        });
-    </script>
-{% endblock script %}
+{% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/static/js/dropdown.js"></script>
+{% endblock scripts %}
