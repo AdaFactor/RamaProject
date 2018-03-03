@@ -19,11 +19,13 @@
                         มาร่วมเป็นส่วนหนึ่งกับพวกเรา ชมรมคนรักในหลวง
                     </h5>
                     <div class="row">
-                        <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 text-center ">
-                            <a href={% url 'AuthenApp:registration' %}>
-                                <button type="button" class="btn btn-warning btn-fill">สมัครสมาชิก</button>
-                            </a>
-                        </div>
+                        {% if user.is_authenticated %}
+                            <div class="col-md-4 col-md-offset-4 col-sm6-6 col-sm-offset-3 text-center ">
+                                <a href={% url 'AuthenApp:registration' %}>
+                                    <button type="button" class="btn btn-warning btn-fill">เพิ่มสมาชิก</button>
+                                </a>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>
