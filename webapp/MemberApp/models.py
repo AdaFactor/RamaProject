@@ -7,9 +7,9 @@ class Address(models.Model):
     """
         Address of member in the site.
     """
-    house_no = models.CharField(max_length=8)
+    house_no = models.CharField(max_length=16)
     resident_name = models.CharField(max_length=64, blank=True, null=True)
-    village_no = models.CharField(max_length=3)
+    village_no = models.CharField(max_length=16)
     alley = models.CharField(max_length=32)
     road = models.CharField(max_length=32)
     area = models.CharField(max_length=32)
@@ -63,6 +63,32 @@ class Member(models.Model):
     expiry_date = models.DateField(blank=True, null=True)
     registered_datetime = models.DateTimeField(auto_now=True)
     change_list_template = "admin/change_list_filter_sidebar.html"
+
+    def create_from_post(self, data):
+        address = Address(
+            house_no = data['house_no'],
+            resident_name = data['resident_name'],
+            village_no = data['village_no'],
+            road = data['road'],
+            alley = data['alley'],
+            area = data['area'],
+            sub_area = data['sub_area'],
+            province = data['province'],
+            post_code = data['post_code']
+        )
+
+        address.save()
+
+        self.prefix = data['prefix']
+        self.first_name = data['first_name']
+        self.last_name = data['last_name']
+        self.citizen_id = data['citizen_id']
+        self.gender = data['gender']
+        self.date_birth = data['date_birth']
+        self.phone_no = [data['phone_no']]
+        self.address = address
+        self.email = data['email']
+        self.reference_person = None #data['reference_person']
 
     def cal_expiry_date(self):
         paid_date = self.paid_date

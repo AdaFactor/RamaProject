@@ -35,7 +35,7 @@ $(document).ready(() => {
 
     $("#id_area").change(() => {
         var area = $("#id_area").val();
-        $("#id_subarea").empty();
+        $("#id_sub_area").empty();
         $.ajax({
             url: urlTambons,
             type: "GET",
@@ -53,7 +53,7 @@ $(document).ready(() => {
                     });
                     for(var tambons = 0; tambons <= itemTambons.length; tambons++){
                         if(area == itemTambons[tambons].amphoe_pid){
-                            $("#id_subarea").append(
+                            $("#id_sub_area").append(
                                 '<option value="'+ itemTambons[tambons].pid +'">'+ itemTambons[tambons].name +'</option>'
                             );
                         };

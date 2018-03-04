@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from .models import Member
+from MemberApp.forms import RegistrationForm, AddressForm
+
 
 @login_required
 def profile(request):
@@ -8,18 +11,10 @@ def profile(request):
 # @login_required
 def registration(request):
     if request.POST:
-        if form.is_valid():
-            new_member = form.save(commit=False)
-            new_member.expiry_date = new_member.cal_expiry_date()
-            new_member.save()
-            # Email Module
-            # send_mail(
-            #     'Ada Test Email System',
-            #     'Testing massage is ready for Email system',
-            #     'arkane.ka@adafactor.com',
-            #     ['adadesions@gmail.com'],
-            #     fail_silently=False
-            # )
-            return redirect('StaticPageApp:landing')
+        new_member = Member()
+        new_member.create_from_post(request.POST)
+        new_member.clean()
+        new_member.save()      
+        return redirect('StaticPageApp:landing')
 
     return render(request, 'MemberApp/registration.html')

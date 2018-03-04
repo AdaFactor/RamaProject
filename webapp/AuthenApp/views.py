@@ -1,7 +1,6 @@
 from django.shortcuts import render, redirect
 from django.core.mail import send_mail
 from django.contrib.auth import authenticate, login, logout
-from .forms import RegistrationForm
 
 def signin(request):
     if request.POST:

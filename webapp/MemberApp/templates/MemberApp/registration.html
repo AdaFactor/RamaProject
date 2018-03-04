@@ -13,6 +13,7 @@
     <div class="container">
         <div class="content registration-form">
             <form action="" method="post">
+                {% csrf_token %}
                 <fieldset>
                     <legend class="head-registation">ลงทะเบียนสมาชิกใหม่:</legend>
                     <div class="row">
@@ -109,7 +110,7 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <label for="id_road">ถนน:</label>                                
-                                        <input type="text" name="alley" maxlength="32" class="form-control" required id="id_road">
+                                        <input type="text" name="road" maxlength="32" class="form-control" required id="id_road">
                                     </div>
                                     <div class="col-lg-6">
                                         <label for="id_area">อำเภอ:</label>
@@ -123,8 +124,8 @@
                             <div class="form-group">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <label for="id_subarea">ตำบล:</label>
-                                        <select name="subarea" class="form-control" id="id_subarea">
+                                        <label for="id_sub_area">ตำบล:</label>
+                                        <select name="sub_area" class="form-control" id="id_sub_area">
                                             <option value="" selected>เลือกตำบล</option>
                                         </select>
                                     </div>
@@ -159,7 +160,7 @@
                     </div>
                     
                     <div class="form-group">
-                        <input type="submit" name="submit" value="ยืนยัน" class="btn btn-success btn-block" id="id_submit">
+                        <input type="submit" name="submit" value="ลงทะเบียน" class="btn btn-success btn-block" id="id_submit">
                     </div>
                 </fieldset>
             </form>
