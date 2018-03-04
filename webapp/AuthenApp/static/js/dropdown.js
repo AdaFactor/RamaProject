@@ -21,7 +21,7 @@ $(document).ready(() => {
                 });
                 for(var amphoes = 0; amphoes <= itemAmphoes.length; amphoes++){
                     if(itemAmphoes[amphoes].changwat_pid == "30") {
-                        $("#id_subarea").append(
+                        $("#id_area").append(
                             '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
                         );
                     };
@@ -33,10 +33,9 @@ $(document).ready(() => {
         }
     });
 
-    $("#id_subarea").change(() => {
-        var subarea = $("#id_subarea").val();
-        console.log(subarea);
-        $("#id_area").empty();
+    $("#id_area").change(() => {
+        var area = $("#id_area").val();
+        $("#id_subarea").empty();
         $.ajax({
             url: urlTambons,
             type: "GET",
@@ -53,8 +52,8 @@ $(document).ready(() => {
                         return 0;
                     });
                     for(var tambons = 0; tambons <= itemTambons.length; tambons++){
-                        if(subarea == itemTambons[tambons].amphoe_pid){
-                            $("#id_area").append(
+                        if(area == itemTambons[tambons].amphoe_pid){
+                            $("#id_subarea").append(
                                 '<option value="'+ itemTambons[tambons].pid +'">'+ itemTambons[tambons].name +'</option>'
                             );
                         };

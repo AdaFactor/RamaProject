@@ -5,10 +5,9 @@ from django.contrib.auth.decorators import login_required
 def profile(request):
     return render(request, 'MemberApp/profile.html')
 
-@login_required
+# @login_required
 def registration(request):
     if request.POST:
-        form = RegistrationForm(request, data=request.POST)
         if form.is_valid():
             new_member = form.save(commit=False)
             new_member.expiry_date = new_member.cal_expiry_date()
