@@ -4,6 +4,5 @@ from . import views
 app_name = 'MemberApp'
 urlpatterns = [
     path('profile/', views.profile, name='profile'),
-    # path('diagram/', views.diagram, name='diagram'),    
-        
+    path('registration/', views.registration, name='registration'),
 ]
