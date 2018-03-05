@@ -1,12 +1,13 @@
 {% extends "StaticPageApp/base_site.html" %}
 {% load crispy_forms_tags %}
+{% load static %}
 
 {% block title %}
     Registration
 {% endblock title %}
 
 {% block style %}
-    <link rel="stylesheet" href="/static/css/registation.css">
+    <link rel="stylesheet" href={% static "MemberApp/css/registation.css" %}>
 {% endblock style %}
 
 {% block content %}
@@ -170,5 +171,5 @@
 
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/static/js/dropdown.js"></script>
+    <script src={% static "MemberApp/js/dropdown_korat.js" %}></script>
 {% endblock scripts %}

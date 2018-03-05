@@ -1,6 +1,4 @@
 $(document).ready(() => {
-    // const urlAmphoes = "/static/json/subarea.json";    
-    // const urlTambons = "/static/json/area.json";
     const urlAmphoes = "https://cdn.rawgit.com/AdaFactor/thai-tambons/f2b52554/amphoes/json/th.json";    
     const urlTambons = "https://cdn.rawgit.com/sirimainson/thai-tambons/4aaaec95/tambons/json/th.json";
 
