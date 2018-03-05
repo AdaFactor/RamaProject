@@ -1,15 +1,16 @@
 {% extends "StaticPageApp/base_site.html" %}
+{% load static %}
 
 {% block style %}
     {% comment %} <link rel="stylesheet" href=""> {% endcomment %}
-    <link rel="stylesheet" href="/static/css/login-style.css">
+    <link rel="stylesheet" href={% static "AuthenApp/css/login-style.css" %}>
 {% endblock style %}
 
 {% block content %}
     <div class="container">
         <div class="content login-container">
             <div class="login-page">
-                <img src="/static/images/nine.png" class="img-responsive center-block" width="auto" height="50px" alt="Responsive image" />
+                <img src={% static "StaticPageApp/images/nine.png" %} class="img-responsive center-block" width="auto" height="50px" alt="Responsive image" />
                 
                 <div id="login-form">
                     <form action={% url 'AuthenApp:signin' %} method=POST>
@@ -45,5 +46,5 @@
 {% endblock content %}
 
 {% block scripts %}
-    <script src="/static/js/login.js"></script>
+    <script src={% static "AuthenApp/js/login.js" %}></script>
 {% endblock scripts %}
