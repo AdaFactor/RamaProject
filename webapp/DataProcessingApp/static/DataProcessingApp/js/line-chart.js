@@ -35,5 +35,5 @@ $(document).ready(()=>{
 
     }
 
-    $.getJSON("/static/json/area.json", addArea);
+    $.getJSON("/static/DataProcessingApp/json/area_data.json", addArea);
 });

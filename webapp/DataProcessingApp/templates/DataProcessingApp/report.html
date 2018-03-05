@@ -1,7 +1,8 @@
 {% extends "StaticPageApp/base_site.html" %}
+{% load static %}
 
 {% block style %}
-    <link href="/static/css/report-style.css" rel="stylesheet" />    
+    <link href={% static "DataProcessingApp/css/report-style.css" %} rel="stylesheet" />    
 {% endblock style %}
 
 
@@ -24,7 +25,7 @@
 {% block scripts %}
     <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
     <script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-    <script src="/static/js/line-chart.js"></script>
-    <script src="/static/js/column-chart.js"></script>
-    <script src="/static/js/pie-chart.js"></script>    
+    <script src={% static "DataProcessingApp/js/line-chart.js" %}></script>
+    <script src={% static "DataProcessingApp/js/column-chart.js" %}></script>
+    <script src={% static "DataProcessingApp/js/pie-chart.js" %}></script>    
 {% endblock scripts %}
