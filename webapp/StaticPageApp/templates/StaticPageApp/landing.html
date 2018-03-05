@@ -1,10 +1,10 @@
 {% extends "./base_site.html" %}
+{% load static %}
 
 {% block style %}
-    <!-- <link href="/static/css/main-style.css" rel="stylesheet" /> -->
 {% endblock style %}
 
-{% block content %}
+{% block content %}      
         <div class="container">
             <h1 class="logo cursive">
                 ชมรมคนรักในหลวง
@@ -13,7 +13,12 @@
                 <h4 class="motto">เพราะพ่อสอนให้เรารู้จักรัก รู้จักให้ รู้จัก
                     <u>"พอเพียง"</u>
                 </h4>
-                <img src="/static/images/nine.png" class="img-responsive center-block" width="auto" alt="Responsive image" />
+                <img
+                    src={% static "StaticPageApp/images/nine.png" %}
+                    class="img-responsive center-block"
+                    width="auto"
+                    alt="Responsive image"
+                />
                 <div class="subscribe">
                     <h5 class="info-text">
                         มาร่วมเป็นส่วนหนึ่งกับพวกเรา ชมรมคนรักในหลวง
