@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '^mrdhbj==cwuy+7x_p85ff0o8dnuzbx9wo(7fa*y^8w2(g_^y%'
+SECRET_KEY = os.environ.get('RAMA_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -79,14 +79,15 @@ WSGI_APPLICATION = 'webapp.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ramadb',
-        'USER': 'adafactor',
-        'PASSWORD': '1234',
+        'USER': os.environ.get('DATABASE_USERNAME', ''),
+        'PASSWORD': os.environ.get('DATABASE_PWD', ''),
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': os.environ.get(''),
     }
 }
 
