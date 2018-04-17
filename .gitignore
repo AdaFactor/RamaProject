@@ -105,3 +105,6 @@ ENV/
 
 #Migratio
 migrations/
+
+#backup file
+backup/
