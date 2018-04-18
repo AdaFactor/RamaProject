@@ -8,6 +8,7 @@
 
 {% block style %}
     <link rel="stylesheet" href={% static "MemberApp/css/registation.css" %}>
+    <link rel="stylesheet" href={% static "MemberApp/css/jquery.datepicker.css" %}>    
 {% endblock style %}
 
 {% block content %}
@@ -67,7 +68,7 @@
                                     </div>
                                     <div class="col-lg-6">
                                         <label for="id_date_birth" class="control-label">วันเกิด: </label>
-                                        <input type="date" name="date_birth" class="dateinput form-control" required id="id_date_birth">
+                                        <input type="text" name="date_birth" class="dateinput form-control" required id="id_date_birth">
                                     </div>
                                 </div>
                             </div>
@@ -116,7 +117,7 @@
                                     <div class="col-lg-6">
                                         <label for="id_area">อำเภอ:</label>
                                         <select name="area" class="form-control" id="id_area">
-                                            <option value="" selected>เลือกอำเภอ</option>
+                                            <option value="">เลือกอำเภอ</option>
                                         </select>
                                     </div>
                                 </div>
@@ -172,4 +173,17 @@
 {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src={% static "MemberApp/js/dropdown_korat.js" %}></script>
+    <script src={% static "MemberApp/js/jquery.datepicker.js" %}></script>
+    <script src={% static "MemberApp/js/datepicker.full.js" %}></script>
+    <script>
+        $(function() {
+            $.datetimepicker.setLocale('th');
+            $("#id_date_birth").datetimepicker({
+                format: 'd-m-Y',
+                timepicker:false,
+                lang:'th',  // แสดงภาษาไทย
+                yearOffset:543,  // ใช้ปี พ.ศ. บวก 543 เพิ่มเข้าไปในปี ค.ศ
+            });
+        });
+    </script>  
 {% endblock scripts %}
