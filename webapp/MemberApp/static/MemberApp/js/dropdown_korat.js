@@ -20,9 +20,20 @@ $(document).ready(() => {
                 for(var amphoes = 0; amphoes <= itemAmphoes.length; amphoes++){
                     if(itemAmphoes[amphoes].changwat_pid == "30") {
                         $("#id_area").append(
-                            '<option value="'+ itemAmphoes[amphoes].pid +'">'+ itemAmphoes[amphoes].name +'</option>'
+                            '<option data-status="'
+                                + itemAmphoes[amphoes].pid 
+                                +'" value="'
+                                + itemAmphoes[amphoes].name 
+                                + '">'
+                                + itemAmphoes[amphoes].name 
+                                + '</option>'
                         );
+                        
+                        // $("#area_pid").append(
+                        //     '<input type="hidden" id="area'+ amphoes +'" value="'+ itemAmphoes[amphoes].pid +'">'
+                        // );
                     };
+                    
                 };
             });
         },
@@ -32,6 +43,7 @@ $(document).ready(() => {
     });
 
     $("#id_area").change(() => {
+        var hid_area = $('#id_area option:selected').data('status');
         var area = $("#id_area").val();
         $("#id_sub_area").empty();
         $.ajax({
@@ -50,9 +62,10 @@ $(document).ready(() => {
                         return 0;
                     });
                     for(var tambons = 0; tambons <= itemTambons.length; tambons++){
-                        if(area == itemTambons[tambons].amphoe_pid){
+                        let tambon_pid = itemTambons[tambons].amphoe_pid;
+                        if(hid_area == tambon_pid){
                             $("#id_sub_area").append(
-                                '<option value="'+ itemTambons[tambons].pid +'">'+ itemTambons[tambons].name +'</option>'
+                                '<option value="'+ itemTambons[tambons].name +'">'+ itemTambons[tambons].name +'</option>'
                             );
                         };
                     };
